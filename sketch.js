@@ -104,6 +104,10 @@ function draw() {
       ground.x = ground.width/2;
     }
     
+    if(score%100 === 0 && score > 0){
+      checkPointSound.play()
+    }
+    
     //jump when the space key is pressed
     if(keyDown("space")&& trex.y >= 150) {
         trex.velocityY = -12;
